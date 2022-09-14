@@ -1,0 +1,18 @@
+.hero img.hero-background {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero.has-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero.has-background .hero-body {
+    z-index: 10;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
