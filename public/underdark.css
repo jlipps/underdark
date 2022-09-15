@@ -1,3 +1,15 @@
+html, body {
+    min-height: 100vh;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
 .hero img.hero-background {
     position: absolute;
     object-fit: cover;
@@ -13,8 +25,4 @@
 
 .hero.has-background .hero-body {
     z-index: 10;
-}
-
-a:hover {
-    text-decoration: underline;
 }

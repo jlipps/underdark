@@ -1,5 +1,5 @@
 export default function Head(req={}) {
-  const { path } = req
+  const { path, session } = req
   const title = `Notes from the Underdark`
   return `
     <!DOCTYPE html>
@@ -10,7 +10,7 @@ export default function Head(req={}) {
       <title>${title}</title>
       <link rel="stylesheet" href="/_static/bulma.css">
       <link rel="stylesheet" href="/_static/underdark.css">
-      <link rel="icon" href="/_static/favicon.svg">
+      <link rel="icon" href="/_static/img/favicon.ico">
       <script src="https://kit.fontawesome.com/abff5eacda.js" crossorigin="anonymous"></script>
     </head>
   `

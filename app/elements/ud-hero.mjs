@@ -3,7 +3,7 @@ export default function UDHero({html, state}) {
   const {img = ''} = attrs
   return html`
     <section class="has-background-black">
-      <div class="container is-widescreen">
+      <div class="container is-desktop">
         <div class="hero has-background">
           <img class="hero-background" src="${img}" />
           <div class="hero-body is-justify-content-center is-flex">
