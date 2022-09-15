@@ -4,13 +4,21 @@ export default function UDLayout({html}) {
       #main {
         min-height: 100vh;
       }
+
+      .navbar-brand {
+        align-items: center;
+      }
+
+      .navbar-brand a.button:hover {
+        background-color: #222;
+      }
     </style>
 
     <div id="main" class="is-flex is-flex-direction-column">
       <div>
         <nav class="navbar container is-desktop">
           <div class="navbar-brand">
-            <a class="navbar-item" href="/"><img src="/_static/img/underdark-logo-small.png" /></a>
+            <a class="button is-primary navbar-item" href="/"><img src="/_static/img/underdark-logo-small-trans.png" /></a>
           </div>
           <div class="navbar-menu">
             <div class="navbar-start">
