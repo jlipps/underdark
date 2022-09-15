@@ -1,7 +1,9 @@
 {
   "scripts": {
     "start": "sandbox",
-    "lint": "eslint ./app/**/*.mjs --fix"
+    "lint": "eslint ./app/**/*.mjs --fix",
+    "build:css": "node-sass --omit-source-map-url bulma-custom/underdark.scss public/bulma.css",
+    "watch:css": "npm run build:css -- --watch"
   },
   "devDependencies": {
     "@architect/sandbox": "latest",
@@ -9,7 +11,9 @@
     "@types/glob": "^8.0.0",
     "@types/marked": "^4.0.7",
     "aws-sdk": "^2.1215.0",
-    "eslint": "latest"
+    "bulma": "^0.9.4",
+    "eslint": "latest",
+    "node-sass": "^7.0.3"
   },
   "dependencies": {
     "@begin/validator": "^0.0.10",

@@ -11,6 +11,7 @@ export default function Head(req={}) {
       <link rel="stylesheet" href="/_static/bulma.css">
       <link rel="stylesheet" href="/_static/underdark.css">
       <link rel="icon" href="/_static/favicon.svg">
+      <script src="https://kit.fontawesome.com/abff5eacda.js" crossorigin="anonymous"></script>
     </head>
   `
 }

@@ -3,7 +3,7 @@ export default function UDLayout({html}) {
     <div>
       <nav class="navbar container is-widescreen">
         <div class="navbar-brand">
-          <a class="navbar-item" href="/">Notes from the Underdark</a>
+          <a class="navbar-item" href="/"><img src="/_static/img/underdark-logo-small.png" /></a>
         </div>
         <div class="navbar-menu">
           <div class="navbar-start">
@@ -15,7 +15,7 @@ export default function UDLayout({html}) {
                 <a class="navbar-item" href="/episodes">Episodes</a>
               </div>
             </div>
-            <a class="navbar-item" href="/blog">Blog</a>
+            <a class="navbar-item" href="/about">About</a>
             <a class="navbar-item" href="/podcast">Podcast</a>
           </div>
           <div class="navbar-end">
