@@ -34,3 +34,7 @@ h1, h2, h3 {
 .ud-markdown figure {
     margin: 2em auto;
 }
+
+.button ud-icon {
+    width: 1.6em;
+}
