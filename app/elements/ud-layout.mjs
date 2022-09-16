@@ -25,9 +25,9 @@ export default function UDLayout({html}) {
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Story</a>
                 <div class="navbar-dropdown">
+                  <a class="navbar-item" href="/episodes">Episodes</a>
                   <a class="navbar-item" href="/campaigns">Campaigns</a>
                   <a class="navbar-item" href="/characters">Characters</a>
-                  <a class="navbar-item" href="/episodes">Episodes</a>
                 </div>
               </div>
               <a class="navbar-item" href="/about">About</a>
