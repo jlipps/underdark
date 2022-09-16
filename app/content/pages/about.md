@@ -1,4 +1,4 @@
-# About _Notes from the Underdark_
+# _Notes from the Underdark_
 
 <figure class="image is-128x128"><img src="/_static/img/yvr.jpg" class="is-rounded" /></figure>
 

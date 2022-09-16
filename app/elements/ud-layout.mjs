@@ -14,11 +14,28 @@ export default function UDLayout({html}) {
       }
     </style>
 
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        const burger = document.querySelector('.navbar-burger')
+        const menu = document.querySelector('.navbar-menu')
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active')
+          menu.classList.toggle('is-active')
+        })
+
+      })
+    </script>
+
     <div id="main" class="is-flex is-flex-direction-column">
       <div>
         <nav class="navbar container is-desktop">
           <div class="navbar-brand">
-            <a class="button is-primary navbar-item" href="/"><img src="/_static/img/underdark-logo-small-trans.png" /></a>
+            <a class="navbar-item" href="/"><img src="/_static/img/underdark-logo-small.png" /></a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
           </div>
           <div class="navbar-menu">
             <div class="navbar-start">
@@ -33,11 +50,15 @@ export default function UDLayout({html}) {
               <a class="navbar-item" href="/about">About</a>
               <a class="navbar-item" href="/about">Contact</a>
             </div>
-            <div class="navbar-end">
+            <div class="navbar-end is-hidden-touch">
               <div class="buttons">
                 <a class="button is-primary" href="/episodes/latest"><ud-icon icon="quote-left" class="mr-3"></ud-icon> <span>Latest Story</span></a>
                 <a class="button is-primary" href="/podcast"><ud-icon icon="microphone" class="mr-3"></ud-icon> <span>Podcast</span></a>
               </div>
+            </div>
+            <div class="navbar-end is-hidden-desktop">
+              <a class="navbar-item" href="/episodes/latest"><span>Latest Story</span></a>
+              <a class="navbar-item" href="/podcast"><span>Podcast</span></a>
             </div>
           </div>
         </nav>

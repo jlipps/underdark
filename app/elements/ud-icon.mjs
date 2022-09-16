@@ -7,6 +7,12 @@ export default function UDIcon({html, state}) {
     throw new Error(`<ud-icon> needs an icon attr`)
   }
   return html`
+    <style>
+      .button ud-icon {
+          width: 1em;
+      }
+    </style>
+
     <span class="icon is-${size}">
       <span ${faSizeClass}>
         <i class="fas fa-${icon} ${border ? 'fa-border' : ''}"></i>

@@ -5,10 +5,16 @@ export default function html({html, state}) {
   const {name} = metadata
   return html`
     <ud-layout>
-      <h1 class="title">${name}</h1>
-      <div class="content">
-        ${contentHtml}
-      </div>
+      <ud-hero slot="hero" img="/_static/img/hero-typewriter.jpg">
+        <h1>Author</h1>
+      </ud-hero>
+      <ud-content>
+        <h1 class="title">${name}</h1>
+        <figure class="image is-128x128"><img src="/_static/img/jlipps.jpg" class="is-rounded" /></figure>
+        <div class="content">
+          ${contentHtml}
+        </div>
+      </ud-content>
     </ud-layout>
   `
 }

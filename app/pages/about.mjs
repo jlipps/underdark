@@ -6,10 +6,10 @@ export default function html({html, state}) {
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="/_static/img/hero-books.jpg">
-        <h1 class="title p-6">&nbsp;</h1>
+        <h1>About</h1>
       </ud-hero>
 
-      <ud-markdown class="is-flex is-justify-content-center">${mdHtml}</ud-markdown>
+      <ud-content class="is-flex is-justify-content-center">${mdHtml}</ud-content>
 
     </ud-layout>
   `

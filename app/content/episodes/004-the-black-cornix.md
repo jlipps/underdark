@@ -4,6 +4,7 @@ episodeNum: 4
 campaign: champions-of-the-kydemones
 author: jlipps
 title: The Black Cornix
+date: 2022-07-09
 ---
 
 Evendur steps forward out of the mouth of the tunnel into the darkened warehouse, unable to see (or ignoring) the shock and betrayal written on the faces of his party. He addresses the still-wary Black Cornix Syndicate workers whom we surprised on our midnight journey back to the Inner City: "There's no need to fight."

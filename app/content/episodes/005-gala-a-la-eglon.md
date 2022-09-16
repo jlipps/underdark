@@ -4,6 +4,7 @@ episodeNum: 5
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Gala a la Eglon
+date: 2022-07-22
 ---
 
 When we left our party, Rianne and Orwin were in a bit of trouble with Arcus, who hadn't taken kindly to being deceived, or reminded of the lost husband we were meant to be finding. Luckily, with a little bit of cajoling and flattery, and the insistence that Lord Eglon's party was in fact our most promising lead for finding Leolin, Arcus cheered up and went immediately into party mode. When they arrived, Rianne and Orwin breezed right in as members of Arcus's entourage, and found that Evendur and Fenn were already inside, having gotten in with Little Lord Matrim.

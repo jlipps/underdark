@@ -2,7 +2,7 @@ export default function Episode({html, state}) {
   const {store} = state
   const {data} = store
   const {html: mdHtml, episode, nextEpisode, prevEpisode} = data
-  const {title, episodeNum, campaign, author} = episode
+  const {title, episodeNum, campaign, author, date} = episode
   const {name: campaignName, path: campaignPath} = campaign
   const {name: authorName, path: authorPath} = author
 
@@ -28,20 +28,21 @@ export default function Episode({html, state}) {
 
   return html`
     <ud-layout>
-      <ud-hero slot="hero" img="/_static/img/hero-books.jpg">
-        <h1 class="title p-6">&nbsp;</h1>
+      <ud-hero slot="hero" img="/_static/img/hero-adventure-forest.jpg">
+        <h1>Episode</h1>
       </ud-hero>
 
-      <ud-markdown class="is-flex is-justify-content-center">
-        <h1>${title}</h1>
+      <ud-content>
+        <h1 class="title">${title}</h1>
         <div class="tags is-justify-content-center">
           <span class="tag is-light"><a href="${campaignPath}">${campaignName}</a>, Episode ${episodeNum}</span>
           <span class="tag is-light">By&nbsp;<a href="${authorPath}">${authorName}</a></span>
+          <span class="tag is-light">${date}</span>
         </div>
         ${mdHtml}
-      </ud-markdown>
+      </ud-content>
 
-      <div class="is-flex is-justify-content-space-between">
+      <div class="is-flex is-justify-content-space-around is-flex-wrap-wrap">
         <div>
           ${prevEpisodeBtn}
         </div>

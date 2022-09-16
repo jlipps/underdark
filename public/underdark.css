@@ -8,6 +8,7 @@ a:hover {
 
 h1, h2, h3 {
     font-family: 'Cinzel', serif;
+    text-align: center;
 }
 
 .hero img.hero-background {
@@ -25,16 +26,4 @@ h1, h2, h3 {
 
 .hero.has-background .hero-body {
     z-index: 10;
-}
-
-.ud-markdown h2 {
-    text-align: center;
-}
-
-.ud-markdown figure {
-    margin: 2em auto;
-}
-
-.button ud-icon {
-    width: 1.6em;
 }

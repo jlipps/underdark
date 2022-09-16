@@ -11,15 +11,15 @@ export default function html ({ html, state }) {
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="/_static/img/hero-map.jpg">
-        <h1 class="title p-6">&nbsp;</h1>
+        <h1>Campaign</h1>
       </ud-hero>
 
-      <ud-markdown class="is-flex is-justify-content-center">
+      <ud-content class="is-flex is-justify-content-center">
         <h1>${name}</h1>
         ${mdHtml}
         <h2>Episodes</h2>
         <ul>${episodesHtml.join('\n')}</ul>
-      </ud-markdown>
+      </ud-content>
 
     </ud-layout>
   `

@@ -4,7 +4,7 @@ export default function BadPage({html, state}) {
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="/_static/img/hero-explosion.jpg">
-        <h1 class="title has-text-white">500 - Internal Server Error</h1>
+        <h1>500 - Internal Server Error</h1>
       </ud-hero>
 
       <article class="message is-danger">

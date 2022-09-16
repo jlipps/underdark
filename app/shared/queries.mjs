@@ -1,5 +1,5 @@
 import path from 'path'
-import {glob, parseMarkdown, CONTENT_DIR} from './md-reader.mjs'
+import {glob, parseMarkdown, CONTENT_DIR, hydrateEpisode} from './md-reader.mjs'
 
 export async function findEpisodes({id, episodeNum, campaign, author, title} = {}) {
   const episodeDir = path.join(CONTENT_DIR, 'episodes')
@@ -17,7 +17,19 @@ export async function findEpisodes({id, episodeNum, campaign, author, title} = {
     ) {
       continue
     }
+    await hydrateEpisode(episode)
     found.push(data)
   }
   return found
 }
+
+export function compareEpisodesByNum(a, b) {
+  if (a.episode.episodeNum < b.episode.episodeNum) {
+    return 1
+  }
+  if (a.episode.episodeNum > b.episode.episodeNum) {
+    return -1
+  }
+  return 0
+}
+

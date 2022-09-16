@@ -1,4 +1,4 @@
-import {getMarkdown, SlugNotFoundError} from './md-reader.mjs'
+import {getMarkdown, hydrateEpisode, SlugNotFoundError} from './md-reader.mjs'
 
 export async function contentGuard(contentType, slug, innerFn) {
   try {
@@ -12,10 +12,6 @@ export async function contentGuard(contentType, slug, innerFn) {
       }
     }
     throw err
-    return {
-      statusCode: 500,
-      json: {},
-    }
   }
 }
 
@@ -25,13 +21,8 @@ export async function authorGuard(slug, innerFn) {
 
 export async function episodeGuard(slug, innerFn) {
   return await contentGuard('episodes', slug, async (data) => {
-    return await campaignGuard(data.metadata.campaign, async (campaignData) => {
-      data.episode.campaign = campaignData.campaign
-      return await authorGuard(data.metadata.author, async (authorData) => {
-        data.episode.author = authorData.author
-        return await innerFn(data)
-      })
-    })
+    await hydrateEpisode(data.episode)
+    return await innerFn(data)
   })
 }
 

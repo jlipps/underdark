@@ -29,6 +29,12 @@ export async function parseMarkdown(mdFile, type) {
   metadata.path = `/${type}/${metadata.slug}`
   const singularType = type.replace(/s$/, '')
 
+  if (metadata.date) {
+    const date = new Date(metadata.date).toLocaleDateString('en-US', {dateStyle: 'medium'})
+    metadata._date = metadata.date
+    metadata.date = date
+  }
+
   return {
     metadata,
     [singularType]: metadata,
@@ -53,4 +59,24 @@ export async function getMarkdown(type, slug) {
 
   return parseMarkdown(mdFile, type)
 
+}
+
+export async function getEpisode(slug) {
+  return await getMarkdown('episodes', slug)
+}
+
+export async function getCampaign(slug) {
+  return await getMarkdown('campaigns', slug)
+}
+
+export async function getAuthor(slug) {
+  return await getMarkdown('authors', slug)
+}
+
+export async function hydrateEpisode(episode) {
+  const campaignData = await getCampaign(episode.campaign)
+  const authorData = await getAuthor(episode.author)
+  episode.campaign = campaignData.campaign
+  episode.author = authorData.author
+  return episode
 }

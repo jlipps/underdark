@@ -1,15 +1,5 @@
 import {episodeGuard} from '../../shared/guards.mjs'
-import {findEpisodes} from '../../shared/queries.mjs'
-
-function compareEpisodesByNum(a, b) {
-  if (a.episode.episodeNum < b.episode.episodeNum) {
-    return 1
-  }
-  if (a.episode.episodeNum > b.episode.episodeNum) {
-    return -1
-  }
-  return 0
-}
+import {findEpisodes, compareEpisodesByNum} from '../../shared/queries.mjs'
 
 export async function get(req) {
   const slug = req.params.slug
