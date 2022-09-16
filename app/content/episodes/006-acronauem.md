@@ -5,6 +5,7 @@ campaign: champions-of-the-kydemones
 author: jlipps
 title: Acronauem
 date: 2022-08-04
+image: /_static/img/content/episodes/orb.jpg
 ---
 
 The Tehokivi sat among a pile of other jewelry and necklaces, looking every fantasy gram the orb of untold power that it was. The party was in shock; what was it doing here? How did we happen to find it? Our search for Leolin had opened up into _much_ bigger vistas. World-changingly dangerous ones. Fenn was suspicious, and spent some time investigating the orb and the surrounding stones. Based on his extensive religious and magical training, he identified a number of items related to the Chemosh cult, but no sign that the Tehokivi was some kind of illusion. After a quick council, we decided that we needed to take the Tehokivi with us to get it out of the hands of the Chemosh (who had already been inciting much of the violence in Nauem---something we now knew must be part of some much bigger plan). Fenn warned everyone not to touch the orb with bare hands, because we didn't know enough about it. So we ripped up some party cape and Fenn used it to grab the stone.

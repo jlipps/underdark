@@ -6,9 +6,11 @@ import _glob from 'glob'
 import { marked } from 'marked'
 import frontMatter from 'front-matter'
 
-export const glob = B.promisify(_glob)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+export const glob = B.promisify(_glob)
 export const CONTENT_DIR = path.resolve(__dirname, '..', 'content')
+
+const SNIPPET_LENGTH = 300
 
 export class SlugNotFoundError extends Error {
   constructor(slug) {
@@ -73,10 +75,13 @@ export async function getAuthor(slug) {
   return await getMarkdown('authors', slug)
 }
 
-export async function hydrateEpisode(episode) {
+export async function hydrateEpisode({episode, html}) {
   const campaignData = await getCampaign(episode.campaign)
   const authorData = await getAuthor(episode.author)
   episode.campaign = campaignData.campaign
   episode.author = authorData.author
+  episode.snippet = html.replace(/(<([^>]+)>)/gi, '').substring(0, SNIPPET_LENGTH)
+  const lastSpace = episode.snippet.lastIndexOf(' ')
+  episode.snippet = episode.snippet.substring(0, lastSpace) + '...'
   return episode
 }

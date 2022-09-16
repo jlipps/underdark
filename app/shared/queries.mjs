@@ -17,7 +17,7 @@ export async function findEpisodes({id, episodeNum, campaign, author, title} = {
     ) {
       continue
     }
-    await hydrateEpisode(episode)
+    await hydrateEpisode(data)
     found.push(data)
   }
   return found

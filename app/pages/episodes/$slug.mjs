@@ -2,16 +2,23 @@ export default function Episode({html, state}) {
   const {store} = state
   const {data} = store
   const {html: mdHtml, episode, nextEpisode, prevEpisode} = data
-  const {title, episodeNum, campaign, author, date} = episode
+  const {title, image, episodeNum, campaign, author, date} = episode
   const {name: campaignName, path: campaignPath} = campaign
   const {name: authorName, path: authorPath} = author
+
+  let imageHtml = ''
+  if (image) {
+    imageHtml = html`
+      <figure class="image is-128x128"><img src="${image}" class="is-rounded" /></figure>
+    `
+  }
 
   let nextEpisodeBtn = ''
   if (nextEpisode) {
     nextEpisodeBtn = html`
       <a class="button mt-6" href="${nextEpisode.episode.path}">
         Ep. ${nextEpisode.episode.episodeNum},&nbsp;<em>${nextEpisode.episode.title}</em>
-        <ud-icon icon="angles-right"></ud-icon>
+        <ud-icon icon="angles-right" pos="right"></ud-icon>
       </a>
     `
   }
@@ -39,6 +46,7 @@ export default function Episode({html, state}) {
           <span class="tag is-light">By&nbsp;<a href="${authorPath}">${authorName}</a></span>
           <span class="tag is-light">${date}</span>
         </div>
+        ${imageHtml}
         ${mdHtml}
       </ud-content>
 

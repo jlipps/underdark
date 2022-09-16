@@ -21,7 +21,7 @@ export async function authorGuard(slug, innerFn) {
 
 export async function episodeGuard(slug, innerFn) {
   return await contentGuard('episodes', slug, async (data) => {
-    await hydrateEpisode(data.episode)
+    await hydrateEpisode(data)
     return await innerFn(data)
   })
 }

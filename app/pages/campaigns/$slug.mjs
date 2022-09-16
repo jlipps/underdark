@@ -1,13 +1,9 @@
-// View documentation at: https://docs.begin.com
-export default function html ({ html, state }) {
+export default function html ({html, state}) {
   const {store} = state
   const {data} = store
   const {html: mdHtml, campaign} = data
-  const {name, episodes} = campaign
+  const {name} = campaign
 
-  const episodesHtml = episodes.map((e) => html`
-    <li><a href="${e.path}">${e.title}</a></li>
-  `)
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="/_static/img/hero-map.jpg">
@@ -18,7 +14,7 @@ export default function html ({ html, state }) {
         <h1>${name}</h1>
         ${mdHtml}
         <h2>Episodes</h2>
-        <ul>${episodesHtml.join('\n')}</ul>
+        <ud-episode-list></ud-episode-list>
       </ud-content>
 
     </ud-layout>

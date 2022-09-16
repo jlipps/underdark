@@ -1,5 +1,6 @@
 ---
 name: Jonathan Lipps
+image: "/_static/img/jlipps.jpg"
 ---
 
 Jonathan Lipps is the narrator of these stories. His more general website can be found at

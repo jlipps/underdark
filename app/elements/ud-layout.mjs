@@ -52,8 +52,8 @@ export default function UDLayout({html}) {
             </div>
             <div class="navbar-end is-hidden-touch">
               <div class="buttons">
-                <a class="button is-primary" href="/episodes/latest"><ud-icon icon="quote-left" class="mr-3"></ud-icon> <span>Latest Story</span></a>
-                <a class="button is-primary" href="/podcast"><ud-icon icon="microphone" class="mr-3"></ud-icon> <span>Podcast</span></a>
+                <a class="button is-primary" href="/episodes/latest"><ud-icon icon="quote-left"></ud-icon> <span>Latest Story</span></a>
+                <a class="button is-primary" href="/podcast"><ud-icon icon="microphone"></ud-icon> <span>Podcast</span></a>
               </div>
             </div>
             <div class="navbar-end is-hidden-desktop">

@@ -29,7 +29,8 @@ story with D&D---alway curious but never having gotten into it. So we beseeched 
 to run a new campaign, and he agreed! We started to play in a world of the DM's own design called
 _Qawz'mahautë_. It's not (as far as I know now as a player) related to the "standard" D&D realms,
 but we are playing using the [basic 5th Edition
-rules](https://dnd.wizards.com/what-is-dnd/basic-rules), with some world-specific adjustments.
+rules](https://dnd.wizards.com/what-is-dnd/basic-rules), with some world-specific adjustments and
+significant alterations to spellcasting to fit a less magic-oriented world.
 
 When we began play, one of our party (who happened to be the editor of the theology school's
 newspaper), suggested that we write synopses of our sessions so that others could follow along.
