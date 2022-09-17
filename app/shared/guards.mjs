@@ -1,4 +1,5 @@
-import {getMarkdown, hydrateEpisode, SlugNotFoundError} from './md-reader.mjs'
+import {getMarkdown, SlugNotFoundError} from './md-reader.mjs'
+import {hydrateEpisode} from './queries.mjs'
 
 export async function contentGuard(contentType, slug, innerFn) {
   try {

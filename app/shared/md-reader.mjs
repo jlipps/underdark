@@ -5,12 +5,11 @@ import {fileURLToPath} from 'url'
 import _glob from 'glob'
 import { marked } from 'marked'
 import frontMatter from 'front-matter'
+import { singularize } from './utils.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export const glob = B.promisify(_glob)
 export const CONTENT_DIR = path.resolve(__dirname, '..', 'content')
-
-const SNIPPET_LENGTH = 300
 
 export class SlugNotFoundError extends Error {
   constructor(slug) {
@@ -29,7 +28,7 @@ export async function parseMarkdown(mdFile, type) {
   const mdHtml = marked.parse(body)
   metadata.slug = fileNameToSlug(mdFile)
   metadata.path = `/${type}/${metadata.slug}`
-  const singularType = type.replace(/s$/, '')
+  const singularType = singularize(type)
 
   if (metadata.date) {
     const date = new Date(metadata.date).toLocaleDateString('en-US', {dateStyle: 'medium'})
@@ -75,13 +74,3 @@ export async function getAuthor(slug) {
   return await getMarkdown('authors', slug)
 }
 
-export async function hydrateEpisode({episode, html}) {
-  const campaignData = await getCampaign(episode.campaign)
-  const authorData = await getAuthor(episode.author)
-  episode.campaign = campaignData.campaign
-  episode.author = authorData.author
-  episode.snippet = html.replace(/(<([^>]+)>)/gi, '').substring(0, SNIPPET_LENGTH)
-  const lastSpace = episode.snippet.lastIndexOf(' ')
-  episode.snippet = episode.snippet.substring(0, lastSpace) + '...'
-  return episode
-}

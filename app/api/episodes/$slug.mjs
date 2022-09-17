@@ -5,7 +5,7 @@ export async function get(req) {
   const slug = req.params.slug
 
   if (slug === 'latest') {
-    const allEpisodes = await findEpisodes()
+    const allEpisodes = await findEpisodes({}, compareEpisodesByNum)
     if (allEpisodes.length === 0) {
       return {
         statusCode: 404,
@@ -13,7 +13,6 @@ export async function get(req) {
       }
     }
 
-    allEpisodes.sort(compareEpisodesByNum)
     return {
       location: allEpisodes[0].episode.path,
       json: {data: allEpisodes[0]}

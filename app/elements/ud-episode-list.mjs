@@ -3,12 +3,10 @@ export default function UDEpisodeList({html, state}) {
   const {episodes} = store
 
   const episodeBlocks = episodes.map((e) => {
-    const {path, title, episodeNum, snippet, campaign, author, date} = e
+    const {path, title, episodeNum, snippet, campaign, author, date, image} = e
     return html`
       <article class="media">
-        <div class="media-left has-background-grey-light">
-          <p class="is-size-2 has-text-light">${episodeNum}</p>
-        </div>
+        <ud-thumbnail image="${image}" text="${episodeNum}"></ud-thumbnail>
         <div class="media-content">
           <div class="content">
             <h4><a href="${path}">${title}</a></h4>
@@ -25,18 +23,5 @@ export default function UDEpisodeList({html, state}) {
     `
   })
 
-  return html`
-    <style>
-      .media-left {
-        width: 64px;
-        height: 64px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
-
-    ${episodeBlocks.join('\n')}
-  `
+  return episodeBlocks.join('\n')
 }
