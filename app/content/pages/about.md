@@ -1,6 +1,7 @@
-# _Notes from the Underdark_
-
-<figure class="image is-128x128"><img src="/_static/img/yvr.jpg" class="is-rounded" /></figure>
+---
+title: Notes from the Underdark
+image: /_static/img/yvr.jpg
+---
 
 In the early part of the Summer of 2022 in Vancouver, Canada, a group of friends was chatting at
 a beach party. We were all students (in one fashion or another) at a local school of theology. One
@@ -45,21 +46,3 @@ After a while of publishing the session stories in the school newspaper, I thoug
 to share them with a wider audience. So, I built this site to host information about this first
 campaign, and any that follow. I also decided it would be fun to trial a podcast version of the
 stories as well. And here we are.
-
-## About the author
-
-<figure class="image is-128x128"><img src="/_static/img/jlipps.jpg" class="is-rounded" /></figure>
-
-Hi, I'm [Jonathan Lipps](https://jlipps.com)! I'm your scribe for these adventures, but I am not
-creating them all on my own. I'm not even the DM, so I don't really know what's going to happen
-before it happens. I'm also only in charge of what my particular character is going to do, so the
-real "author" of the stories is the entire group of us playing the campaign(s) together. That's
-what makes D&D so fun---it's a collaborative storywriting experience! That being said, I'll try to
-indicate if and when someone else wrote the actual words for something posted on this site.
-Otherwise, you're stuck with me. Oh, and if you listen to the podcast? That's me, too, including
-the music!
-
-If that ends up not being too awful of an experience, you can always head on over to my
-[website](https://jlipps.com) to learn about what I do in "real life" when I'm not failing to
-produce a Scottish accent for my character. I've got links to other work, creative projects, etc...
-Check it out!

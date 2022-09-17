@@ -6,6 +6,7 @@
     "watch:css": "npm run build:css -- --watch"
   },
   "devDependencies": {
+    "@architect/architect": "^10.6.0",
     "@architect/sandbox": "latest",
     "@types/bluebird": "^3.5.36",
     "@types/glob": "^8.0.0",
