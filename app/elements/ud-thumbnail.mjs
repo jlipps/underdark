@@ -1,3 +1,5 @@
+import arc from '@architect/functions'
+
 export default function UDThumbnail({html, state}) {
   const {attrs} = state
   const {image, text} = attrs
@@ -10,7 +12,7 @@ export default function UDThumbnail({html, state}) {
   if (image) {
     thumbnail = html`
       <div class="media-left">
-        <figure class="image is-64x64"><img src="${image}" class="is-rounded" /></figure>
+        <figure class="image is-64x64"><img src="${arc.static(image)}" class="is-rounded" /></figure>
       </div>
     `
   }

@@ -16,7 +16,7 @@ export default function UDEpisodeList({html, state}) {
               <span class="tag is-light">By&nbsp;<a href="${author.path}">${author.name}</a></span>
               <span class="tag is-light">${date}</span>
             </div>
-            <div>${snippet}</div>
+            <div>${snippet} <a href="${path}">[read more]</a></div>
           </div>
         </div>
       </article>

@@ -82,7 +82,9 @@ export async function hydrateCampaign({campaign, html}) {
 export async function hydrateItem(itemType, data) {
   if (itemType === 'episodes') {
     return await hydrateEpisode(data)
-  } else if (itemType == 'campaigns') {
+  } else if (itemType === 'campaigns') {
     return await hydrateCampaign(data)
+  } else if (itemType === 'characters') {
+    return await hydrateCharacter(data)
   }
 }

@@ -13,6 +13,8 @@ export default function html ({html, state}) {
       <ud-content class="is-flex is-justify-content-center">
         <h1>${name}</h1>
         ${mdHtml}
+        <h2>Characters</h2>
+        <ud-character-list></ud-character-list>
         <h2>Episodes</h2>
         <ud-episode-list></ud-episode-list>
       </ud-content>
