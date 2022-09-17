@@ -1,12 +1,6 @@
 ---
 name: Champions of the Kydemones
 campaignNum: 1
-characters:
-    - Evendur
-    - Fenn
-    - Orwin
-    - Rianne
-    - Eoin
 ---
 
 This campaign takes place in the world of *Qawz'mahautë*. Since I'm not the DM, I don't know too

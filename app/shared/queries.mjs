@@ -31,6 +31,10 @@ export async function findCampaigns(specs = {}, comparator) {
   return await findItems('campaigns', specs, comparator)
 }
 
+export async function findCharacters(specs = {}, comparator) {
+  return await findItems('characters', specs, comparator)
+}
+
 export function compareEpisodesByNum(a, b) {
   if (a.episode.episodeNum < b.episode.episodeNum) {
     return 1
@@ -60,8 +64,17 @@ export async function hydrateEpisode({episode, html}) {
   return episode
 }
 
+export async function hydrateCharacter({character, html}) {
+  const campaignData = await getCampaign(character.campaign)
+  character.campaign = campaignData.campaign
+  character.snippet = getSnippet(html)
+  return character
+}
+
+
 export async function hydrateCampaign({campaign, html}) {
   campaign.episodes = await findEpisodes({campaign: campaign.slug}, compareEpisodesByNum)
+  campaign.characters = await findCharacters({campaign: campaign.slug})
   campaign.snippet = getSnippet(html)
   return campaign
 }

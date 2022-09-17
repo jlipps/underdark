@@ -1,5 +1,5 @@
 import {getMarkdown, SlugNotFoundError} from './md-reader.mjs'
-import {hydrateEpisode} from './queries.mjs'
+import {hydrateEpisode, hydrateCharacter} from './queries.mjs'
 
 export async function contentGuard(contentType, slug, innerFn) {
   try {
@@ -29,4 +29,11 @@ export async function episodeGuard(slug, innerFn) {
 
 export async function campaignGuard(slug, innerFn) {
   return await contentGuard('campaigns', slug, innerFn)
+}
+
+export async function characterGuard(slug, innerFn) {
+  return await contentGuard('characters', slug, async (data) => {
+    await hydrateCharacter(data)
+    return await innerFn(data)
+  })
 }

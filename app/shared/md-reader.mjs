@@ -74,3 +74,6 @@ export async function getAuthor(slug) {
   return await getMarkdown('authors', slug)
 }
 
+export async function getCharacter(slug) {
+  return await getMarkdown('characters', slug)
+}
