@@ -11,6 +11,10 @@ export default function UDLayout({html}) {
         align-items: center;
       }
 
+      .navbar-end a.button {
+        margin-left: 0.5rem;
+      }
+
       .navbar-brand a.button:hover {
         background-color: #222;
       }
