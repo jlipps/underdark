@@ -6,13 +6,15 @@ export default function UDIcon({html, state}) {
   if (!icon) {
     throw new Error(`<ud-icon> needs an icon attr`)
   }
-  return html`
-    <style>
-    </style>
+  let iconClasses = `fa-${icon}`
+  if (icon.includes(' ')) {
+    iconClasses = icon.split(' ').map((i) => `fa-${i}`).join(' ')
+  }
 
+  return html`
     <span class="icon is-${size} m${pos === 'left' ? 'r' : 'l'}-1">
       <span ${faSizeClass}>
-        <i class="fas fa-${icon} ${border ? 'fa-border' : ''}"></i>
+        <i class="fas ${iconClasses} ${border ? 'fa-border' : ''}"></i>
       </span>
     </span>
   `

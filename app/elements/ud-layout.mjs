@@ -44,23 +44,21 @@ export default function UDLayout({html}) {
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Story</a>
                 <div class="navbar-dropdown">
-                  <a class="navbar-item" href="/episodes">Episodes</a>
+                  <a class="navbar-item" href="/episodes/latest">Latest Episode</a>
+                  <a class="navbar-item" href="/episodes">All Episodes</a>
                   <a class="navbar-item" href="/campaigns">Campaigns</a>
                   <a class="navbar-item" href="/characters">Characters</a>
                 </div>
               </div>
+              <a class="navbar-item" href="/podcast">Podcast</a>
               <a class="navbar-item" href="/about">About</a>
-              <a class="navbar-item" href="/about">Contact</a>
             </div>
-            <div class="navbar-end is-hidden-touch">
+            <div class="navbar-end">
               <div class="buttons">
-                <a class="button is-primary" href="/episodes/latest"><ud-icon icon="quote-left"></ud-icon> <span>Latest Story</span></a>
-                <a class="button is-primary" href="/podcast"><ud-icon icon="microphone"></ud-icon> <span>Podcast</span></a>
-              </div>
-            </div>
-            <div class="navbar-end is-hidden-desktop">
-              <a class="navbar-item" href="/episodes/latest"><span>Latest Story</span></a>
-              <a class="navbar-item" href="/podcast"><span>Podcast</span></a>
+                <a class="button is-primary" href="https://twitter.com/underdark_notes">
+                  <ud-icon icon='brands twitter'></ud-icon>
+                  Follow
+                </a>
             </div>
           </div>
         </nav>
