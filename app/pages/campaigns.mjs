@@ -1,3 +1,5 @@
+import arc from '@architect/functions'
+
 export default function Campaigns({html, state}) {
   const {store} = state
   const {campaigns} = store
@@ -25,7 +27,7 @@ export default function Campaigns({html, state}) {
 
   return html`
     <ud-layout>
-      <ud-hero slot="hero" img="/_static/img/hero-map.jpg">
+      <ud-hero slot="hero" img="${arc.static('img/hero-map.jpg')}">
         <h1>All Campaigns</h1>
       </ud-hero>
 

@@ -1,9 +1,11 @@
+import arc from '@architect/functions'
+
 export default function BadPage({html, state}) {
   const {attrs} = state
   const {error} = attrs
   return html`
     <ud-layout>
-      <ud-hero slot="hero" img="/_static/img/hero-explosion.jpg">
+      <ud-hero slot="hero" img="${arc.static('img/hero-explosion.jpg')}">
         <h1>500 - Internal Server Error</h1>
       </ud-hero>
 

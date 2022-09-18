@@ -1,6 +1,6 @@
 ---
 name: Jonathan Lipps
-image: "/_static/img/jlipps.jpg"
+image: img/jlipps.jpg
 ---
 
 Hi, I'm [Jonathan](https://jlipps.com)! I'm your scribe for these adventures, but I am not

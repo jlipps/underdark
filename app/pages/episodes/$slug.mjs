@@ -1,3 +1,5 @@
+import arc from '@architect/functions'
+
 export default function Episode({html, state}) {
   const {store} = state
   const {data} = store
@@ -9,7 +11,7 @@ export default function Episode({html, state}) {
   let imageHtml = ''
   if (image) {
     imageHtml = html`
-      <figure class="image is-128x128"><img src="${image}" class="is-rounded" /></figure>
+      <figure class="image is-128x128"><img src="${arc.static(image)}" class="is-rounded" /></figure>
     `
   }
 
@@ -35,7 +37,7 @@ export default function Episode({html, state}) {
 
   return html`
     <ud-layout>
-      <ud-hero slot="hero" img="/_static/img/hero-adventure-forest.jpg">
+      <ud-hero slot="hero" img="${arc.static('img/hero-adventure-forest.jpg')}">
         <h1>Episode</h1>
       </ud-hero>
 

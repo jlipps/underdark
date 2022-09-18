@@ -1,3 +1,5 @@
+import arc from '@architect/functions'
+
 export default function UDLayout({html}) {
   return html`
     <style>
@@ -30,7 +32,7 @@ export default function UDLayout({html}) {
       <div>
         <nav class="navbar container is-desktop">
           <div class="navbar-brand">
-            <a class="navbar-item" href="/"><img src="/_static/img/underdark-logo-small.png" /></a>
+            <a class="navbar-item" href="/"><img src="${arc.static('img/underdark-logo-small.png')}" /></a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>

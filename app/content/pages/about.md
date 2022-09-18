@@ -1,6 +1,6 @@
 ---
 title: Notes from the Underdark
-image: /_static/img/yvr.jpg
+image: img/yvr.jpg
 ---
 
 In the early part of the Summer of 2022 in Vancouver, Canada, a group of friends was chatting at
