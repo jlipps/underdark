@@ -21,16 +21,15 @@ export default function Head(req={}) {
 
       <meta name="description" content="${desc}" />
 
-      <!-- Twitter Card data -->
+      <!-- Twitter -->
       <meta name="twitter:card" content="summary">
       <meta name="twitter:site" content="${twitter}">
       <meta name="twitter:title" content="${title}">
       <meta name="twitter:description" content="${desc}">
       <meta name="twitter:creator" content="${twitter}">
-      <-- Twitter Summary card images must be at least 120x120px -->
       <meta name="twitter:image" content="${url}${socialImg}">
 
-      <!-- Open Graph data -->
+      <!-- Open Graph -->
       <meta property="og:title" content="${title}" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="${url}" />
