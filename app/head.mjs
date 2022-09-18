@@ -5,7 +5,7 @@ export default function Head(req={}) {
   const title = `Notes from the Underdark`
   const desc = 'Stories, in summary, from our D&D campaigns'
   const twitter = '@underdark_notes'
-  const socialImg = arc.static('img/underdark-logo-on-bg.jpg')
+  const socialImg = arc.static('img/underdark-on-bg.jpg')
   const url = 'https://underdark.quest'
   return `
     <!DOCTYPE html>
