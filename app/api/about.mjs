@@ -1,10 +1,10 @@
 import {contentGuard} from '../shared/guards.mjs'
 
 export async function get(req) {
-  return await contentGuard('pages', 'about', async (data) => {
-    return await contentGuard('authors', 'jlipps', (authorData) => {
+  return await contentGuard('pages', 'about', async (page) => {
+    return await contentGuard('authors', 'jlipps', (author) => {
       return {
-        json: {data, authorData}
+        json: {page, author}
       }
     })
   })
