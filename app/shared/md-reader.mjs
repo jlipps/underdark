@@ -6,10 +6,15 @@ import _glob from 'glob'
 import { marked } from 'marked'
 import frontMatter from 'front-matter'
 import { singularize } from './utils.mjs'
+import LRU from 'lru-cache'
+import {validator} from '@begin/validator'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export const glob = B.promisify(_glob)
 export const CONTENT_DIR = path.resolve(__dirname, '..', 'content')
+
+const MAX_CACHE_SIZE = 64000000
+let cache
 
 export class SlugNotFoundError extends Error {
   constructor(slug) {
@@ -23,6 +28,24 @@ export function fileNameToSlug(file) {
 }
 
 export async function parseMarkdown(mdFile, type) {
+  if (!cache) {
+    cache = new LRU({
+      maxSize: MAX_CACHE_SIZE,
+      sizeCalculation: (value) => {
+        return JSON.stringify(value).length
+      }
+    })
+  }
+  const key = `${type}-${mdFile}`
+  let data = cache.get(key)
+  if (!data) {
+    data = await _parseMarkdown(mdFile, type)
+    cache.set(key, data)
+  }
+  return data
+}
+
+async function _parseMarkdown(mdFile, type) {
   const fileData = await fs.readFile(mdFile, 'utf-8')
   const {attributes: metadata, body} = frontMatter(fileData)
   const mdHtml = marked.parse(body)
