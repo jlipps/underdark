@@ -14,7 +14,7 @@ export const AUTHOR = 'Jonathan Lipps'
 export const LANG = 'en-us'
 export const IMAGE_SQ = arc.static('img/underdark-logo-square.jpg')
 export const IMAGE_RECT = arc.static('img/underdark-on-bg.jpg')
-export const POD_DESC = `Stories from the D&D campaigns I've played in, cast into podcast form.`
+export const POD_DESC = `Stories from the D&D campaigns I've played in, cast into podcast form. Visit the website at <a href="https://underdark.quest">underdark.quest</a>.`
 export const RSS_PATH = `/podcast/rss`
 
 export const POD_LINK_APPLE = ''
