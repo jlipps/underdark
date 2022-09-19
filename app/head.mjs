@@ -1,13 +1,30 @@
 import arc from '@architect/functions'
 import {TITLE, IMAGE_RECT, HOMEPAGE, RSS_PATH} from './shared/constants.mjs'
 
+const isProd = process.env.ARC_ENV === 'production'
+
 export default function Head() {
   const desc = 'Stories, in summary, from our D&D campaigns'
   const twitter = '@underdark_notes'
+
+  const gtagHtml = isProd ? `
+    <!-- gtag start -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27XNCYKFMQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-27XNCYKFMQ');
+    </script>
+    <!-- gtag end -->
+  ` : ''
+
   return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
+      ${gtagHtml}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>${TITLE}</title>
