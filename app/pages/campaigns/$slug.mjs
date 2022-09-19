@@ -3,7 +3,14 @@ import arc from '@architect/functions'
 export default function html ({html, state}) {
   const {store} = state
   const {campaign} = store
-  const {name, html: mdHtml} = campaign
+  const {name, image, html: mdHtml} = campaign
+
+  let imageHtml = ''
+  if (image) {
+    imageHtml = html`
+      <figure class="image is-128x128"><img src="${arc.static(image)}" class="is-rounded" /></figure>
+    `
+  }
 
   return html`
     <ud-layout>
@@ -13,6 +20,7 @@ export default function html ({html, state}) {
 
       <ud-content class="is-flex is-justify-content-center">
         <h1>${name}</h1>
+        ${imageHtml}
         ${mdHtml}
         <h2>Characters</h2>
         <ud-character-list></ud-character-list>

@@ -1,6 +1,7 @@
 ---
 name: Champions of the Kydemones
 campaignNum: 1
+image: img/content/campaigns/champions-of-the-kydemones.jpg
 ---
 
 This campaign takes place in the world of *Qawz'mahautë*. Since I'm not the DM, I don't know too
