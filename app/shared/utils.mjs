@@ -5,8 +5,11 @@ export function singularize(itemType) {
 }
 
 export function getSnippet(text) {
-  const snippet = text.replace(/(<([^>]+)>)/gi, '').substring(0, SNIPPET_LENGTH)
+  const snippet = stripTags(text).substring(0, SNIPPET_LENGTH)
   const lastSpace = snippet.lastIndexOf(' ')
   return snippet.substring(0, lastSpace) + '...'
 }
 
+export function stripTags(html) {
+  return html.replace(/(<([^>]+)>)/gi, '')
+}

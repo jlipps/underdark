@@ -4,7 +4,7 @@ export default function Episode({html, state}) {
   const {store} = state
   const {data} = store
   const {html: mdHtml, episode, nextEpisode, prevEpisode} = data
-  const {title, image, episodeNum, campaign, author, date} = episode
+  const {title, image, episodeNum, campaign, author, date, pod} = episode
   const {name: campaignName, path: campaignPath} = campaign
   const {name: authorName, path: authorPath} = author
 
@@ -35,6 +35,16 @@ export default function Episode({html, state}) {
     `
   }
 
+  let podHtml = ''
+  if (pod) {
+    podHtml = html`
+      <span class="tag is-light">
+        <ud-icon icon="headphones"></ud-icon>
+        <a target="_blank" href="${pod.url}">Listen</a>
+      </span>
+    `
+  }
+
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="${arc.static('img/hero-adventure-forest.jpg')}">
@@ -47,6 +57,7 @@ export default function Episode({html, state}) {
           <span class="tag is-light"><a href="${campaignPath}">${campaignName}</a>, Episode ${episodeNum}</span>
           <span class="tag is-light">By&nbsp;<a href="${authorPath}">${authorName}</a></span>
           <span class="tag is-light">${date}</span>
+          ${podHtml}
         </div>
         ${imageHtml}
         ${mdHtml}

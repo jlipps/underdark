@@ -5,6 +5,7 @@ campaign: champions-of-the-kydemones
 author: jlipps
 title: Intro to the Campaign
 date: 2022-05-15
+pod: overall-intro
 ---
 
 > Note: this is the intro to the campaign that was originally published
@@ -23,3 +24,6 @@ Fenn will not be alone in his quest. He doesn't know it yet, but I have it on go
 Or, we could run into one of these nasty chickens on our first outing and have a total party wipe. Either way, stay tuned to this channel, and I'll share about our epic deeds or misdeeds as the heroes journey on.
 
 (Also, just a note requesting your readerly patience: I'm sure I will be all over the place as a narrator, sometimes describing Fenn in the third person while sometimes talking about the party as a whole in first person plural, because, of course, I am participating in these sessions and narrating them simultaneously from the inside as well as the outside. It's a bit weird, but I trust you'll forgive me.)
+
+Now, for a brief introduction to the world and setting of this campaign, head over to the campaign
+page itself and give it a read: [Champions of the Kydemones](/campaigns/champions-of-the-kydemones)

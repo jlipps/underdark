@@ -1,5 +1,5 @@
 import path from 'path'
-import {glob, parseMarkdown, getCampaign, getAuthor, CONTENT_DIR} from './md-reader.mjs'
+import {glob, parseMarkdown, getCampaign, getAuthor, getPod, CONTENT_DIR} from './md-reader.mjs'
 import {singularize, getSnippet} from './utils.mjs'
 
 export async function findItems(itemType, specs, comparator) {
@@ -35,6 +35,10 @@ export async function findCharacters(specs = {}, comparator) {
   return await findItems('characters', specs, comparator)
 }
 
+export async function findPods(specs = {}, comparator) {
+  return await findItems('pods', specs, comparator)
+}
+
 export function compareEpisodesByNum(a, b) {
   if (a.episode.episodeNum < b.episode.episodeNum) {
     return 1
@@ -61,6 +65,10 @@ export async function hydrateEpisode({episode, html}) {
   episode.campaign = campaignData.campaign
   episode.author = authorData.author
   episode.snippet = getSnippet(html)
+  if (episode.pod) {
+    const podData = await getPod(episode.pod)
+    episode.pod = podData.pod
+  }
   return episode
 }
 

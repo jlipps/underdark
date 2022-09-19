@@ -27,3 +27,7 @@ h1, h2, h3 {
 .hero.has-background .hero-body {
     z-index: 10;
 }
+
+.tag .icon {
+    margin-right: 0 !important;
+}

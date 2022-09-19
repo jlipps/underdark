@@ -23,7 +23,7 @@ to a new continent. Though many of the specific details are lost to them, both h
 legends show it to be around that time that a new pantheon came into being: a whole hierarchy of
 gods antithetical to the Stygea Pantheon, furnishing humanity with a set of codified guidelines
 based around bettering the quality of life, harmonious living and the importance of disseminating
-morality and knowledge, in contrast to the Stygean paradigmm of simply gaining power. Recently,
+morality and knowledge, in contrast to the Stygean paradigm of simply gaining power. Recently,
 followers of this new Pantheon of D'murge have begun to be granted powers akin to those given to
 worshippers of Stygea, though on a much less widespread scale. Neither pantheon of gods are in the
 habit of showing themselves visibly to their followers, but the gifts humans can acquire through

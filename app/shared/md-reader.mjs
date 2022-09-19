@@ -77,3 +77,7 @@ export async function getAuthor(slug) {
 export async function getCharacter(slug) {
   return await getMarkdown('characters', slug)
 }
+
+export async function getPod(slug) {
+  return await getMarkdown('pods', slug)
+}
