@@ -11,6 +11,10 @@ export default function Character({html, state}) {
     html`<a href="${playerUrl}">${playerName}</a>` :
     html`<strong>${playerName}</strong>`
 
+  const imgHtml = image ?
+    html`<img src="${arc.static(image)}" />` :
+    html`<div class="no-image">${name[0]}</div>`
+
   return html`
     <style>
       .card {
@@ -27,6 +31,17 @@ export default function Character({html, state}) {
       .char-specs tr > td:first-child {
         font-weight: bold;
       }
+
+      .no-image {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 10rem;
+        background-color: #eee;
+      }
     </style>
 
     <ud-layout>
@@ -42,7 +57,7 @@ export default function Character({html, state}) {
         </div>
         <div class="card">
           <div class="card-image">
-            <figure class="image"><img src="${arc.static(image)}" /></figure>
+            <figure class="image">${imgHtml}</figure>
           </div>
           <div class="card-content">
             <table class="char-specs table is-striped is-narrow is-size-7">
@@ -53,7 +68,7 @@ export default function Character({html, state}) {
                 <tr><td>Class</td><td>${klass}</td></tr>
                 <tr><td>Age</td><td>${age}</td></tr>
                 <tr><td>Alignment</td><td>${alignment}</td></tr>
-                <tr><td>Nickname</td><td>${nickname}</td></tr>
+                ${nickname && html`<tr><td>Nickname</td><td>${nickname}</td></tr>`}
               </tbody>
             </table>
           </div>

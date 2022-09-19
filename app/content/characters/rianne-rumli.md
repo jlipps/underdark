@@ -1,13 +1,13 @@
 ---
 name: Rianne Naga Rumli
 campaign: champions-of-the-kydemones
-nickname: Rianne
+nickname: null
 player: Anonymous
 playerUrl: null
 race: Erlit
 gender: Female
 age: 34
-klass: Fighter
+klass: Fighter (Archer)
 level: 3
 image: img/content/characters/rianne.jpg
 alignment: '?'
