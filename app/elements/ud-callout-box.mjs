@@ -1,10 +1,12 @@
+import arc from '@architect/functions'
+
 export default function UDCalloutBox({html, state}) {
   const {attrs = {}} = state
-  const {icon = 'home'} = attrs
+  const {image} = attrs
   return html`
     <div class="box media container">
       <div class="media-left">
-        <ud-icon icon="${icon}" size="large" fa-size="lg" border="true"></ud-icon>
+        <ud-thumbnail image="${image}" text=""></ud-thumbnail>
       </div>
       <div class="media-content">
         <div class="content">
