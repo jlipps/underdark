@@ -59,7 +59,7 @@ export default function UDLayout({html}) {
             </div>
             <div class="navbar-end">
               <div class="buttons">
-                <a class="button is-primary" href="https://twitter.com/underdark_notes">
+                <a class="button is-primary" target="_blank" href="https://twitter.com/underdark_notes">
                   <ud-icon icon='brands twitter'></ud-icon>
                   Follow
                 </a>
