@@ -2,7 +2,7 @@
 title: Welcome to Notes from the Underdark
 podNum: 1
 episode: overall-intro
-url: https://underdark.s3.amazonaws.com/podcast/001-intro.mp3
+url: https://media.underdark.quest/podcast/001-intro.mp3
 image: img/underdark-logo-square.jpg
 date: 2022-09-19
 mp3bytes: 13394986
