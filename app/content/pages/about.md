@@ -8,6 +8,14 @@ a beach party. We were all students (in one fashion or another) at a local schoo
 of our number was a veteran "DM" ([Dungeon Master](https://en.wikipedia.org/wiki/Dungeon_Master)),
 and we were discussing Dungeons & Dragons.
 
+[Dungeons & Dragons](https://dnd.wizards.com/) is a structured roleplaying and storytelling game
+where a number of players create characters that inhabit an imaginary world, and are thrown into
+a quest by the DM. Using their own creativity in conjunction with the (quite extensive) rules
+governing game actions, mixed together with the roll of various dice to add an element of chance,
+the characters navigate the world and try to accomplish their missions. What results is an
+emergent, not always predictable outcome that often feels rewarding and engaging for everyone
+involved!
+
 I was a lifelong fantasy nerd, and had spent countless days playing fantasy role-playing video
 games, like World of Warcraft. Because of how and where I grew up, however, I had largely missed
 the Dungeons & Dragons wave. You see, back in the 80s and early 90s, when I was inclined to jump on
