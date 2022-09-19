@@ -27,12 +27,12 @@ export default function UDListenList({html, state}) {
         Spotify
       </a>
 
-      <a class="button" href="${POD_LINK_APPLE}">
+      <a class="button" href="${POD_LINK_APPLE}" disabled>
         <ud-icon icon="brands apple"></ud-icon>
         Apple
       </a>
 
-      <a class="button" href="${POD_LINK_GOOGLE}">
+      <a class="button" href="${POD_LINK_GOOGLE}" disabled>
         <ud-icon icon="brands google"></ud-icon>
         Google
       </a>

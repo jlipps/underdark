@@ -18,6 +18,6 @@ export const POD_DESC = `Stories from the D&D campaigns I've played in, cast int
 export const RSS_PATH = `/podcast/rss`
 
 export const POD_LINK_APPLE = ''
-export const POD_LINK_SPOTIFY = ''
+export const POD_LINK_SPOTIFY = 'https://open.spotify.com/show/3UxIQyIsvQGv4dWQGPWRKY'
 export const POD_LINK_GOOGLE = ''
-export const POD_LINK_AMAZON = ''
+export const POD_LINK_AMAZON = 'https://music.amazon.com/podcasts/dc503e6b-4ec7-4dc0-a997-0130f48979f9'
