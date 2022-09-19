@@ -37,7 +37,7 @@ export default function html({html, state}) {
         <h2>Listen on your favourite service</h2>
         <ud-listen-list></ud-listen-list>
 
-        <h2>All episodes</h2>
+        <h2 class="mt-6 mb-5">Listen to all episodes here</h2>
         ${podBlocks.join('\n')}
 
       </ud-content>

@@ -22,9 +22,9 @@ export default function html ({html, state}) {
         <h1>${name}</h1>
         ${imageHtml}
         ${mdHtml}
-        <h2>Characters</h2>
+        <h2 class="mt-6">Characters</h2>
         <ud-character-list></ud-character-list>
-        <h2>Episodes</h2>
+        <h2 class="mt-6">Episodes</h2>
         <ud-episode-list></ud-episode-list>
       </ud-content>
 
