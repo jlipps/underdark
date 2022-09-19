@@ -15,3 +15,8 @@ export const LANG = 'en-us'
 export const IMAGE_SQ = arc.static('img/underdark-logo-square.jpg')
 export const IMAGE_RECT = arc.static('img/underdark-on-bg.jpg')
 export const POD_DESC = `Stories from the D&D campaigns I've played in, cast into podcast form.`
+
+export const POD_LINK_APPLE = ''
+export const POD_LINK_SPOTIFY = ''
+export const POD_LINK_GOOGLE = ''
+export const POD_LINK_AMAZON = ''

@@ -1,5 +1,5 @@
 import path from 'path'
-import {glob, parseMarkdown, getCampaign, getAuthor, getPod, CONTENT_DIR} from './md-reader.mjs'
+import {glob, parseMarkdown, getEpisode, getCampaign, getAuthor, getPod, CONTENT_DIR} from './md-reader.mjs'
 import {singularize, getSnippet} from './utils.mjs'
 
 export async function findItems(itemType, specs, comparator) {
@@ -59,6 +59,12 @@ export function compareCampaignsByNum(a, b) {
   return 0
 }
 
+export function comparePodsByNum(a, b) {
+  return a.pod.podNum < b.pod.podNum ? 1 :
+    a.pod.podNum > b.pod.podNum ? -1 :
+      0
+}
+
 export async function hydrateEpisode({episode, html}) {
   const campaignData = await getCampaign(episode.campaign)
   const authorData = await getAuthor(episode.author)
@@ -87,6 +93,13 @@ export async function hydrateCampaign({campaign, html}) {
   return campaign
 }
 
+export async function hydratePod({pod, html}) {
+  pod.episode = await getEpisode(pod.episode)
+  pod.campaign = await getCampaign(pod.episode.metadata.campaign)
+  pod.snippet = getSnippet(html)
+  return pod
+}
+
 export async function hydrateItem(itemType, data) {
   if (itemType === 'episodes') {
     return await hydrateEpisode(data)
@@ -94,5 +107,7 @@ export async function hydrateItem(itemType, data) {
     return await hydrateCampaign(data)
   } else if (itemType === 'characters') {
     return await hydrateCharacter(data)
+  } else if (itemType === 'pods') {
+    return await hydratePod(data)
   }
 }
