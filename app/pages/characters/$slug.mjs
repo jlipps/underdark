@@ -3,7 +3,7 @@ import arc from '@architect/functions'
 export default function Character({html, state}) {
   const {store} = state
   const {character} = store
-  const {name, campaign, nickname, player, playerUrl, race, age, klass, level, image,
+  const {name, campaign, nickname, player, playerUrl, race, age, klass, level, image, gender,
          alignment, html: mdHtml} = character
 
   const playerName = player || 'Anonymous'
@@ -49,6 +49,7 @@ export default function Character({html, state}) {
               <tbody>
                 <tr><td>Level</td><td>${level}</td></tr>
                 <tr><td>Race</td><td>${race}</td></tr>
+                <tr><td>Gender</td><td>${gender}</td></tr>
                 <tr><td>Class</td><td>${klass}</td></tr>
                 <tr><td>Age</td><td>${age}</td></tr>
                 <tr><td>Alignment</td><td>${alignment}</td></tr>

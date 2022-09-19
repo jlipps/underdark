@@ -5,6 +5,7 @@ nickname: Fenn
 player: Jonathan Lipps
 playerUrl: /authors/jlipps
 race: Monean
+gender: Male
 age: 54
 klass: Cleric
 level: 3

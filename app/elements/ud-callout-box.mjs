@@ -1,5 +1,3 @@
-import arc from '@architect/functions'
-
 export default function UDCalloutBox({html, state}) {
   const {attrs = {}} = state
   const {image} = attrs
