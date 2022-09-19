@@ -2,10 +2,9 @@ import arc from '@architect/functions'
 
 export default function Character({html, state}) {
   const {store} = state
-  const {data} = store
-  const {html: mdHtml, character} = data
+  const {character} = store
   const {name, campaign, nickname, player, playerUrl, race, age, klass, level, image,
-         alignment} = character
+         alignment, html: mdHtml} = character
 
   const playerName = player || 'Anonymous'
   const playerTag = playerUrl ?

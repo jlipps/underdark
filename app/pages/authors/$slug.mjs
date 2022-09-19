@@ -2,9 +2,8 @@ import arc from '@architect/functions'
 
 export default function html({html, state}) {
   const {store} = state
-  const {data} = store
-  const {metadata, html: contentHtml} = data
-  const {name, image} = metadata
+  const {author} = store
+  const {name, image, html: mdHtml} = author
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="${arc.static('img/hero-typewriter.jpg')}">
@@ -14,7 +13,7 @@ export default function html({html, state}) {
         <h1 class="title">${name}</h1>
         <figure class="image is-128x128"><img src="${arc.static(image)}" class="is-rounded" /></figure>
         <div class="content">
-          ${contentHtml}
+          ${mdHtml}
         </div>
       </ud-content>
     </ud-layout>

@@ -2,11 +2,10 @@ import arc from '@architect/functions'
 
 export default function Pod({html, state}) {
   const {store} = state
-  const {data} = store
-  const {html: mdHtml, pod} = data
-  const {title, snippet, episode, campaign, url, image, date, duration, path} = pod
-  const {episodeNum, path: episodePath} = episode.episode
-  const {name: campaignName, path: campaignPath} = campaign.campaign
+  const {pod} = store
+  const {html: mdHtml, title, episode, campaign, url, image, date, duration, path} = pod
+  const {episodeNum, path: episodePath} = episode
+  const {name: campaignName, path: campaignPath} = campaign
 
   let imageHtml = ''
   if (image) {

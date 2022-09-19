@@ -6,8 +6,8 @@ export default function html({html, state}) {
 
   const podBlocks = pods.map((p) => {
     const {title, snippet, episode, campaign, url, image, date, duration, path} = p
-    const {episodeNum, path: episodePath} = episode.episode
-    const {name: campaignName, path: campaignPath} = campaign.campaign
+    const {episodeNum, path: episodePath} = episode
+    const {name: campaignName, path: campaignPath} = campaign
 
     return html`
       <article class="media">

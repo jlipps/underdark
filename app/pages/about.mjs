@@ -3,8 +3,8 @@ import arc from '@architect/functions'
 export default function html({html, state}) {
   const {store} = state
   const {data, authorData} = store
-  const {html: mdHtml, metadata} = data
-  const {html: authorHtml, metadata: authorMetadata} = authorData
+  const {html: mdHtml, page} = data
+  const {html: authorHtml, author} = authorData
 
   return html`
     <ud-layout>
@@ -13,12 +13,12 @@ export default function html({html, state}) {
       </ud-hero>
 
       <ud-content class="is-flex is-justify-content-center">
-        <h1>${metadata.title}</h1>
-        <figure class="image is-128x128"><img src="${arc.static(metadata.image)}" class="is-rounded" /></figure>
+        <h1>${page.title}</h1>
+        <figure class="image is-128x128"><img src="${arc.static(page.image)}" class="is-rounded" /></figure>
         ${mdHtml}
 
         <h1>About the Author</h1>
-        <figure class="image is-128x128"><img src="${arc.static(authorMetadata.image)}" class="is-rounded" /></figure>
+        <figure class="image is-128x128"><img src="${arc.static(author.image)}" class="is-rounded" /></figure>
         ${authorHtml}
       </ud-content>
 

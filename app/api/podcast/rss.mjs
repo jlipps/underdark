@@ -4,8 +4,8 @@ import {TITLE, OWNER_EMAIL, AUTHOR, POD_DESC, IMAGE_SQ, LANG, HOMEPAGE} from '..
 import xb2 from 'xmlbuilder2'
 
 function getFeedXml (pods) {
-  const item = pods.map(({pod, html}) => {
-    const {title, url, slug, _date, mp3bytes, duration} = pod
+  const item = pods.map((pod) => {
+    const {title, url, slug, _date, mp3bytes, duration, html} = pod
     return {
       title,
       description: stripTags(html),
@@ -52,7 +52,7 @@ function getFeedXml (pods) {
   return doc.end({prettyPrint: true})
 }
 
-export async function get (req) {
+export async function get (/*req*/) {
   const body = getFeedXml(await findPods())
   return {
     headers: {

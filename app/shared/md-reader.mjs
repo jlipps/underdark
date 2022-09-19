@@ -7,7 +7,6 @@ import { marked } from 'marked'
 import frontMatter from 'front-matter'
 import { singularize } from './utils.mjs'
 import LRU from 'lru-cache'
-import {validator} from '@begin/validator'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export const glob = B.promisify(_glob)
@@ -15,6 +14,7 @@ export const CONTENT_DIR = path.resolve(__dirname, '..', 'content')
 
 const MAX_CACHE_SIZE = 64000000
 let cache
+let slugFileCache
 
 export class SlugNotFoundError extends Error {
   constructor(slug) {
@@ -51,7 +51,6 @@ async function _parseMarkdown(mdFile, type) {
   const mdHtml = marked.parse(body)
   metadata.slug = fileNameToSlug(mdFile)
   metadata.path = `/${type}/${metadata.slug}`
-  const singularType = singularize(type)
 
   if (metadata.date) {
     const date = new Date(metadata.date).toLocaleDateString('en-US', {dateStyle: 'medium'})
@@ -59,11 +58,7 @@ async function _parseMarkdown(mdFile, type) {
     metadata.date = date
   }
 
-  return {
-    metadata,
-    [singularType]: metadata,
-    html: mdHtml,
-  }
+  return {...metadata, html: mdHtml}
 }
 
 export async function getMarkdown(type, slug) {
@@ -71,36 +66,34 @@ export async function getMarkdown(type, slug) {
     throw new Error(`MD file slug must be defined`)
   }
 
-  const MD_DIR = path.join(CONTENT_DIR, type)
-  const mdFile = (await glob(path.join(MD_DIR, '*.md'))).find((file) => {
-    const fileSlug = fileNameToSlug(file)
-    return fileSlug.toLowerCase() === slug.toLowerCase()
-  })
+  if (typeof slug !== 'string') {
+    throw new Error(`Slug needs to be a string`)
+  }
+
+  if (!slugFileCache) {
+    slugFileCache = new LRU({max: 1000})
+  }
+
+  const key = `${type}-${slug}`
+  let mdFile = slugFileCache.get(key)
+  if (!mdFile) {
+    const MD_DIR = path.join(CONTENT_DIR, type)
+    mdFile = (await glob(path.join(MD_DIR, '*.md'))).find((file) => {
+      const fileSlug = fileNameToSlug(file)
+      return fileSlug.toLowerCase() === slug.toLowerCase()
+    })
+    if (mdFile) {
+      slugFileCache.set(key, mdFile)
+    }
+  }
 
   if (!mdFile) {
     throw new SlugNotFoundError(slug)
   }
 
   return parseMarkdown(mdFile, type)
-
 }
 
-export async function getEpisode(slug) {
-  return await getMarkdown('episodes', slug)
-}
-
-export async function getCampaign(slug) {
-  return await getMarkdown('campaigns', slug)
-}
-
-export async function getAuthor(slug) {
-  return await getMarkdown('authors', slug)
-}
-
-export async function getCharacter(slug) {
-  return await getMarkdown('characters', slug)
-}
-
-export async function getPod(slug) {
-  return await getMarkdown('pods', slug)
+export function getCache() {
+  return cache
 }

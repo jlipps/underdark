@@ -14,15 +14,14 @@ export async function get(req) {
     }
 
     return {
-      location: allEpisodes[0].episode.path,
-      json: {data: allEpisodes[0]}
+      location: allEpisodes[0].path,
     }
   }
 
-  return await episodeGuard(slug, async (data) => {
-    const allEpisodes = await findEpisodes({campaign: data.episode.campaign.slug})
-    data.nextEpisode = allEpisodes.find((e) => e.episode.episodeNum === data.episode.episodeNum + 1)
-    data.prevEpisode = allEpisodes.find((e) => e.episode.episodeNum === data.episode.episodeNum - 1)
-    return {json: {data}}
+  return await episodeGuard(slug, async (episode) => {
+    const allEpisodes = await findEpisodes({campaign: episode.campaign.slug})
+    const nextEpisode = allEpisodes.find((e) => e.episode.episodeNum === episode.episodeNum + 1)
+    const prevEpisode = allEpisodes.find((e) => e.episode.episodeNum === episode.episodeNum - 1)
+    return {json: {episode, nextEpisode, prevEpisode}}
   })
 }

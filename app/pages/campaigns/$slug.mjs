@@ -2,9 +2,8 @@ import arc from '@architect/functions'
 
 export default function html ({html, state}) {
   const {store} = state
-  const {data} = store
-  const {html: mdHtml, campaign} = data
-  const {name} = campaign
+  const {campaign} = store
+  const {name, html: mdHtml} = campaign
 
   return html`
     <ud-layout>

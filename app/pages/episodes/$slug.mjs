@@ -2,9 +2,8 @@ import arc from '@architect/functions'
 
 export default function Episode({html, state}) {
   const {store} = state
-  const {data} = store
-  const {html: mdHtml, episode, nextEpisode, prevEpisode} = data
-  const {title, image, episodeNum, campaign, author, date, pod} = episode
+  const {episode, nextEpisode, prevEpisode} = store
+  const {title, image, episodeNum, campaign, author, date, pod, html: mdHtml} = episode
   const {name: campaignName, path: campaignPath} = campaign
   const {name: authorName, path: authorPath} = author
 

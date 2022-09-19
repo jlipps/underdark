@@ -14,7 +14,9 @@
     "aws-sdk": "^2.1215.0",
     "bulma": "^0.9.4",
     "eslint": "latest",
-    "node-sass": "^7.0.3"
+    "mocha": "^10.0.0",
+    "node-sass": "^7.0.3",
+    "should": "^13.2.3"
   },
   "dependencies": {
     "@begin/validator": "^0.0.10",

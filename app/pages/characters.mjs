@@ -1,6 +1,6 @@
 import arc from '@architect/functions'
 
-export default function Character({html, state}) {
+export default function Character({html}) {
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="${arc.static('img/hero-sword.jpg')}">
