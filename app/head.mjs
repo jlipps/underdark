@@ -1,5 +1,5 @@
 import arc from '@architect/functions'
-import {TITLE, IMAGE_RECT, HOMEPAGE} from './shared/constants.mjs'
+import {TITLE, IMAGE_RECT, HOMEPAGE, RSS_PATH} from './shared/constants.mjs'
 
 export default function Head() {
   const desc = 'Stories, in summary, from our D&D campaigns'
@@ -14,6 +14,7 @@ export default function Head() {
       <link rel="stylesheet" href="${arc.static('bulma.css')}">
       <link rel="stylesheet" href="${arc.static('underdark.css')}">
       <link rel="icon" href="${arc.static('img/favicon.ico')}">
+      <link type="application/rss+xml" rel="alternate" title="${TITLE}" href="${HOMEPAGE}${RSS_PATH}"/>
       <script src="https://kit.fontawesome.com/abff5eacda.js" crossorigin="anonymous"></script>
 
       <meta name="description" content="${desc}" />
