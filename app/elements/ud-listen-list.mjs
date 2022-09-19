@@ -22,22 +22,22 @@ export default function UDListenList({html, state}) {
       <div class="leading-text">
         <slot></slot>
       </div>
-      <a class="button" href="${POD_LINK_SPOTIFY}">
+      <a class="button" href="${POD_LINK_SPOTIFY}" target="_blank">
         <ud-icon icon="brands spotify"></ud-icon>
         Spotify
       </a>
 
-      <a class="button" href="${POD_LINK_APPLE}" disabled>
+      <a class="button" href="${POD_LINK_APPLE}" disabled target="_blank">
         <ud-icon icon="brands apple"></ud-icon>
         Apple
       </a>
 
-      <a class="button" href="${POD_LINK_GOOGLE}" disabled>
+      <a class="button" href="${POD_LINK_GOOGLE}" disabled target="_blank">
         <ud-icon icon="brands google"></ud-icon>
         Google
       </a>
 
-      <a class="button" href="${POD_LINK_AMAZON}">
+      <a class="button" href="${POD_LINK_AMAZON}" target="_blank">
         <ud-icon icon="brands amazon"></ud-icon>
         Amazon
       </a>
