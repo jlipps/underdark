@@ -77,8 +77,8 @@ export function compareCampaignsByNum(a, b) {
 }
 
 export function comparePodsByNum(a, b) {
-  return a.pod.podNum < b.pod.podNum ? 1 :
-    a.pod.podNum > b.pod.podNum ? -1 :
+  return a.podNum < b.podNum ? 1 :
+    a.podNum > b.podNum ? -1 :
       0
 }
 
