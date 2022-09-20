@@ -47,7 +47,7 @@ there is a religious order called the Kydemones, which maintains an Academy in o
 cities in our starting region, called Nauem. The Academy primarily trains women, but will take
 orphaned infant boys and raise them in the ways of the order. All such men are given the surname
 "Kydemones", unless and until they marry and take their spouse's surname. All of our player
-characters for this campaign have some tie to the Academy, and were either raised their or trained
+characters for this campaign have some tie to the Academy, and were either raised there or trained
 there.
 
 The campaign begins some distance away from Nauem at a Kydemones monastery called Highbury
