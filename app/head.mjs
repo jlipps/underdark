@@ -1,11 +1,10 @@
 import arc from '@architect/functions'
-import {TITLE, IMAGE_RECT, HOMEPAGE, RSS_PATH} from './shared/constants.mjs'
+import {TWITTER_HANDLE, TITLE, IMAGE_RECT, HOMEPAGE, RSS_PATH} from './shared/constants.mjs'
 
 const isProd = process.env.ARC_ENV === 'production'
 
 export default function Head() {
   const desc = 'Stories, in summary, from our D&D campaigns'
-  const twitter = '@underdark_notes'
 
   const gtagHtml = isProd ? `
     <!-- gtag start -->
@@ -38,10 +37,10 @@ export default function Head() {
 
       <!-- Twitter -->
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:site" content="${twitter}">
+      <meta name="twitter:site" content="${TWITTER_HANDLE}">
       <meta name="twitter:title" content="${TITLE}">
       <meta name="twitter:description" content="${desc}">
-      <meta name="twitter:creator" content="${twitter}">
+      <meta name="twitter:creator" content="${TWITTER_HANDLE}">
       <meta name="twitter:image" content="${HOMEPAGE}${IMAGE_RECT}">
 
       <!-- Open Graph -->
