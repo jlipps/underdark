@@ -25,7 +25,7 @@ export default function Pod({html, state}) {
           <span class="tag is-light">${date}</span>
           <span class="tag is-light">${duration}</span>
           <span class="tag is-light"><a href="${campaignPath}">${campaignName}</a>, episode ${episodeNum}</span>
-          <span class="tag is-light"><a href="${episodePath}">Read episode</a></span>
+          <span class="tag is-light"><ud-icon icon="book"></ud-icon><a href="${episodePath}">Read</a></span>
         </div>
         ${imageHtml}
         <div class="is-flex is-justify-content-center">
