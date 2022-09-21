@@ -9,7 +9,7 @@ gender: Male
 age: 36
 klass: Rogue (Assassin)
 level: 3
-image: null
+image: img/content/characters/evendur.jpg
 alignment: '?'
 ---
 
