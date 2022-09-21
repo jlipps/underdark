@@ -86,8 +86,9 @@ export async function hydrateEpisode(episode) {
   episode.campaign = await getCampaign(episode.campaign)
   episode.author = await getAuthor(episode.author)
   episode.snippet = getSnippet(episode.html)
-  if (episode.pod) {
-    episode.pod = await getPod(episode.pod)
+  const pod = (await findPods({episode: episode.slug}))[0]
+  if (pod) {
+    episode.pod = pod
   }
   return episode
 }

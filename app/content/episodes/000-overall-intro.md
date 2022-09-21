@@ -5,7 +5,6 @@ campaign: champions-of-the-kydemones
 author: jlipps
 title: Intro to the Campaign
 date: 2022-05-15
-pod: overall-intro
 ---
 
 > Note: this is the intro to the campaign that was originally published
