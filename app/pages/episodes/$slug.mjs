@@ -39,7 +39,7 @@ export default function Episode({html, state}) {
     podHtml = html`
       <span class="tag is-light">
         <ud-icon icon="headphones"></ud-icon>
-        <a target="_blank" href="${pod.url}">Listen</a>
+        <a href="${pod.path}">Listen</a>
       </span>
     `
   }
