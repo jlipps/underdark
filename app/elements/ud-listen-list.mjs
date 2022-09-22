@@ -48,7 +48,7 @@ export default function UDListenList({html, state}) {
         Apple
       </a>
 
-      <a class="button" href="${POD_LINK_GOOGLE}" disabled target="_blank">
+      <a class="button" href="${POD_LINK_GOOGLE}" target="_blank">
         <ud-icon icon="brands google"></ud-icon>
         Google
       </a>
