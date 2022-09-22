@@ -5,7 +5,7 @@ export default function html({html, state}) {
   const {pods} = store
 
   const podBlocks = pods.map((p) => {
-    const {title, snippet, episode, campaign, url, image, date, duration, path} = p
+    const {title, snippet, episode, campaign, url, image, date, duration, path, shortId} = p
     const {episodeNum, path: episodePath} = episode
     const {name: campaignName, path: campaignPath} = campaign
 
@@ -14,7 +14,7 @@ export default function html({html, state}) {
         <ud-thumbnail image="${image}" text="${title[0]}"></ud-thumbnail>
         <div class="media-content">
           <div class="content">
-            <h4><a href="${path}">${title}</a></h4>
+            <h4>${shortId}: <a href="${path}">${title}</a></h4>
             <div class="tags">
               <span class="tag is-light">${date}</span>
               <span class="tag is-light">${duration}</span>

@@ -20,8 +20,8 @@ export async function get(req) {
 
   return await episodeGuard(slug, async (episode) => {
     const allEpisodes = await findEpisodes({campaign: episode.campaign.slug})
-    const nextEpisode = allEpisodes.find((e) => e.episode.episodeNum === episode.episodeNum + 1)
-    const prevEpisode = allEpisodes.find((e) => e.episode.episodeNum === episode.episodeNum - 1)
+    const nextEpisode = allEpisodes.find((e) => e.episodeNum === episode.episodeNum + 1)
+    const prevEpisode = allEpisodes.find((e) => e.episodeNum === episode.episodeNum - 1)
     return {json: {episode, nextEpisode, prevEpisode}}
   })
 }

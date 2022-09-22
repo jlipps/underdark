@@ -2,8 +2,8 @@ import arc from '@architect/functions'
 
 export default function Pod({html, state}) {
   const {store} = state
-  const {pod} = store
-  const {html: mdHtml, title, episode, campaign, url, image, date, duration, path} = pod
+  const {pod, nextEpisode, prevEpisode} = store
+  const {html: mdHtml, title, episode, campaign, url, image, date, duration, path, shortId} = pod
   const {episodeNum, path: episodePath} = episode
   const {name: campaignName, path: campaignPath} = campaign
 
@@ -14,13 +14,33 @@ export default function Pod({html, state}) {
     `
   }
 
+  let nextEpisodeBtn = ''
+  if (nextEpisode) {
+    nextEpisodeBtn = html`
+      <a class="button mt-6" href="${nextEpisode.path}">
+        ${nextEpisode.title} (${nextEpisode.shortId})
+        <ud-icon icon="angles-right" pos="right"></ud-icon>
+      </a>
+    `
+  }
+
+  let prevEpisodeBtn = ''
+  if (prevEpisode) {
+    prevEpisodeBtn = html`
+      <a class="button mt-6" href="${prevEpisode.path}">
+        <ud-icon icon="angles-left"></ud-icon>
+        ${prevEpisode.title} (${prevEpisode.shortId})
+      </a>
+    `
+  }
+
   return html`
     <ud-layout>
       <ud-hero slot="hero" img="${arc.static('img/hero-bells.jpg')}">
         <h1>Podcast Episode</h1>
       </ud-hero>
       <ud-content>
-        <h1 class="title">${title}</h1>
+        <h1 class="title">${title} (${shortId})</h1>
         <div class="tags is-justify-content-center">
           <span class="tag is-light">${date}</span>
           <span class="tag is-light">${duration}</span>
@@ -34,6 +54,16 @@ export default function Pod({html, state}) {
         <ud-listen-list size="small mb-3 mt-3"></ud-listen-list>
         ${mdHtml}
       </ud-content>
+
+      <div class="is-flex is-justify-content-space-around is-flex-wrap-wrap">
+        <div>
+          ${prevEpisodeBtn}
+        </div>
+        <div>
+          ${nextEpisodeBtn}
+        </div>
+      </div>
+
     </ud-layout>
   `
 }

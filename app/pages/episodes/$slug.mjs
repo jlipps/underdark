@@ -17,8 +17,8 @@ export default function Episode({html, state}) {
   let nextEpisodeBtn = ''
   if (nextEpisode) {
     nextEpisodeBtn = html`
-      <a class="button mt-6" href="${nextEpisode.episode.path}">
-        Ep. ${nextEpisode.episode.episodeNum},&nbsp;<em>${nextEpisode.episode.title}</em>
+      <a class="button mt-6" href="${nextEpisode.path}">
+        Ep. ${nextEpisode.episodeNum},&nbsp;<em>${nextEpisode.title}</em>
         <ud-icon icon="angles-right" pos="right"></ud-icon>
       </a>
     `
@@ -27,9 +27,9 @@ export default function Episode({html, state}) {
   let prevEpisodeBtn = ''
   if (prevEpisode) {
     prevEpisodeBtn = html`
-      <a class="button mt-6" href="${prevEpisode.episode.path}">
+      <a class="button mt-6" href="${prevEpisode.path}">
         <ud-icon icon="angles-left"></ud-icon>
-        Ep. ${prevEpisode.episode.episodeNum},&nbsp;<em>${prevEpisode.episode.title}</em>
+        Ep. ${prevEpisode.episodeNum},&nbsp;<em>${prevEpisode.title}</em>
       </a>
     `
   }

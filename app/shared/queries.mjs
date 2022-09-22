@@ -35,7 +35,14 @@ export async function findItems(itemType, specs, comparator) {
   checkLoop: for (const mdFile of mdFiles) {
     const item = await parseMarkdown(mdFile, itemType)
     for (const spec of Object.keys(specs)) {
-      if (specs[spec] !== undefined && item[spec] !== specs[spec]) {
+      if (specs[spec] === undefined) { // no need to test if spec is omitted
+        continue checkLoop
+      }
+      // we match either if the spec matches the item attribute,
+      // or if we're dealing with a hydrated item and its slug matches the spec
+      const didMatch = item[spec] === specs[spec] ||
+        (item[spec] && item[spec]._hydrated && item[spec].slug === specs[spec])
+      if (!didMatch) {
         continue checkLoop
       }
     }
@@ -111,6 +118,9 @@ export async function hydratePod(pod) {
   pod.episode = await getEpisode(pod.episode)
   pod.campaign = await getCampaign(pod.episode.campaign.slug)
   pod.snippet = getSnippet(pod.html)
+  const {season} = pod
+  const {episodeNum} = pod.episode
+  pod.shortId = `S${season}` + (episodeNum ? `E${episodeNum}` : ' trailer')
   return pod
 }
 
