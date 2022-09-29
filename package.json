@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "sandbox --host 0.0.0.0",
+    "refresh": "rm -rf package-lock.json node_modules && npm install",
     "lint": "eslint ./app/**/*.mjs --fix",
     "build:css": "node-sass --omit-source-map-url bulma-custom/underdark.scss public/bulma.css",
     "watch:css": "npm run build:css -- --watch"

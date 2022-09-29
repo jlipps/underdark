@@ -6,7 +6,7 @@ export async function get (req) {
     const podsForSeason = (await findPods()).filter((p) => p.campaign.slug === pod.campaign.slug)
     const nextEpisode = podsForSeason.find((p) => p.episode.episodeNum === pod.episode.episodeNum + 1)
     const prevEpisode = podsForSeason.find((p) => p.episode.episodeNum === pod.episode.episodeNum - 1)
-    return {json: {pod, nextEpisode, prevEpisode}}
+    return {json: {pod, nextEpisode, prevEpisode, title: pod.title}}
   })
 }
 

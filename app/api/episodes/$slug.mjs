@@ -22,6 +22,6 @@ export async function get(req) {
     const allEpisodes = await findEpisodes({campaign: episode.campaign.slug})
     const nextEpisode = allEpisodes.find((e) => e.episodeNum === episode.episodeNum + 1)
     const prevEpisode = allEpisodes.find((e) => e.episodeNum === episode.episodeNum - 1)
-    return {json: {episode, nextEpisode, prevEpisode}}
+    return {json: {episode, nextEpisode, prevEpisode, title: episode.title}}
   })
 }

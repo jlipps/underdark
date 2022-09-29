@@ -15,6 +15,7 @@ export async function get (req) {
     campaign.episodes.reverse()
     return {
       json: {
+        title: campaign.name,
         campaign,
         episodes: campaign.episodes,
         characters: campaign.characters,

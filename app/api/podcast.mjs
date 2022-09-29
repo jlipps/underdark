@@ -4,6 +4,9 @@ export async function get(/*req*/) {
   let pods = await findPods({}, comparePodsByNum)
 
   return {
-    json: {pods}
+    json: {
+      title: 'Podcast',
+      pods,
+    }
   }
 }
