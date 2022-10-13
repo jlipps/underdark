@@ -7,7 +7,7 @@ episode: gala-a-la-eglon
 url: https://media.underdark.quest/podcast/005-gala-a-la-eglon.mp3
 image: img/underdark-logo-square.jpg
 date: 2022-10-04
-mp3bytes: 18611639
+mp3bytes: 18609043
 duration: "15:30"
 durationSecs: 930
 ---

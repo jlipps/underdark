@@ -7,7 +7,7 @@ episode: call-of-the-kydemones
 url: https://media.underdark.quest/podcast/002-call-of-the-kydemones.mp3
 image: img/underdark-logo-square.jpg
 date: 2022-09-20
-mp3bytes: 8638088
+mp3bytes: 8635541
 duration: "07:12"
 durationSecs: 432
 ---

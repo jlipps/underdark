@@ -8,6 +8,7 @@ export function getFeedXml (pods) {
     const {episodeNum} = episode
     const item = {
       title,
+      link: `${HOMEPAGE}/pods/${slug}`,
       description: {
         '$': html,
       },
@@ -50,9 +51,17 @@ export function getFeedXml (pods) {
         'itunes:image': {
           '@href': HOMEPAGE + POD_IMG,
         },
-        'itunes:category': {
-          '@text': 'Games &amp; Hobbies',
-        },
+        'itunes:category': [{
+          '@text': 'Fiction',
+          'itunes:category': {
+            '@text': 'Science Fiction',
+          }
+        }, {
+          '@text': 'Leisure',
+          'itunes:category': {
+            '@text': 'Games',
+          }
+        }],
         'itunes:type': 'serial',
         'itunes:explicit': 'false',
         language: LANG,

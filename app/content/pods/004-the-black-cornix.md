@@ -7,7 +7,7 @@ episode: the-black-cornix
 url: https://media.underdark.quest/podcast/004-the-black-cornix.mp3
 image: img/underdark-logo-square.jpg
 date: 2022-09-22
-mp3bytes: 14056406
+mp3bytes: 14053811
 duration: "11:43"
 durationSecs: 703
 ---

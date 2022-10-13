@@ -7,7 +7,7 @@ episode: return-to-nauem
 url: https://media.underdark.quest/podcast/002-return-to-nauem.mp3
 image: img/underdark-logo-square.jpg
 date: 2022-09-20
-mp3bytes: 7885239
+mp3bytes: 7882643
 duration: "06:34"
 durationSecs: 394
 ---

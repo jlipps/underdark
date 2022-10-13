@@ -7,7 +7,7 @@ episode: overall-intro
 url: https://media.underdark.quest/podcast/001-intro.mp3
 image: img/underdark-logo-square.jpg
 date: 2022-09-19
-mp3bytes: 13394986
+mp3bytes: 13392380
 duration: "11:10"
 durationSecs: 670
 ---
