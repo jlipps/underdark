@@ -1,6 +1,6 @@
 import xb2 from 'xmlbuilder2'
 import {stripTags} from './utils.mjs'
-import {TITLE, OWNER_EMAIL, AUTHOR, POD_DESC, IMAGE_SQ, LANG, HOMEPAGE} from './constants.mjs'
+import {TITLE, OWNER_EMAIL, AUTHOR, POD_DESC, POD_IMG, LANG, HOMEPAGE} from './constants.mjs'
 
 export function getFeedXml (pods) {
   const item = pods.map((pod) => {
@@ -48,7 +48,7 @@ export function getFeedXml (pods) {
         },
         'itunes:summary': stripTags(POD_DESC),
         'itunes:image': {
-          '@href': HOMEPAGE + IMAGE_SQ,
+          '@href': HOMEPAGE + POD_IMG,
         },
         'itunes:category': {
           '@text': 'Games &amp; Hobbies',
