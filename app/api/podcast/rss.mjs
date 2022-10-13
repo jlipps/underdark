@@ -5,8 +5,10 @@ export async function get (/*req*/) {
   const xml = getFeedXml(await findPods())
   return {
     headers: {
-      'cache-control': 'max-age=300'
+      'cache-control': 'no-cache'
     },
     xml
   }
 }
+
+export const head = get
