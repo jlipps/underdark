@@ -1,6 +1,6 @@
 import xb2 from 'xmlbuilder2'
 import {stripTags} from './utils.mjs'
-import {TITLE, OWNER_EMAIL, AUTHOR, POD_DESC, POD_IMG, LANG, HOMEPAGE} from './constants.mjs'
+import {TITLE, OWNER_EMAIL, AUTHOR, POD_DESC, POD_IMG, LANG, HOMEPAGE, RSS_PATH} from './constants.mjs'
 
 export function getFeedXml (pods) {
   const item = pods.map((pod) => {
@@ -39,6 +39,11 @@ export function getFeedXml (pods) {
       '@xmlns:content': 'http://purl.org/rss/1.0/modules/content/',
       channel: {
         title: TITLE,
+        'atom:link': {
+          '@href': HOMEPAGE + RSS_PATH,
+          '@rel': 'self',
+          '@type': 'application/rss+xml',
+        },
         'itunes:owner': {
           'itunes:name': 'Jonathan Lipps',
           'itunes:email': OWNER_EMAIL,
@@ -64,8 +69,8 @@ export function getFeedXml (pods) {
         'itunes:explicit': 'no',
         language: LANG,
         link: HOMEPAGE,
-        item,
         copyright: 'Copyright 2022 Jonathan Lipps',
+        item,
       }
     }
   }
