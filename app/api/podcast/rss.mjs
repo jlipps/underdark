@@ -15,7 +15,7 @@ export async function head(req) {
   const res = await get(req)
   res.headers['content-length'] = res.xml.length
   delete res.xml
-  res.headers['content-type'] = 'application/xml; charset=utf8'
+  res.headers['content-type'] = 'application/xml; charset=utf-8'
   res.body = ''
   return res
 }

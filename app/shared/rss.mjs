@@ -22,7 +22,7 @@ export function getFeedXml (pods) {
       'itunes:episodeType': type,
       'itunes:season': season,
       guid: {
-        '@isPermalink': 'false',
+        '@isPermaLink': 'false',
         '#': slug,
       }
     }
@@ -44,9 +44,7 @@ export function getFeedXml (pods) {
           'itunes:email': OWNER_EMAIL,
         },
         'itunes:author': AUTHOR,
-        description: {
-          '$': POD_DESC,
-        },
+        description: stripTags(POD_DESC),
         'itunes:summary': stripTags(POD_DESC),
         'itunes:image': {
           '@href': HOMEPAGE + POD_IMG,
@@ -63,7 +61,7 @@ export function getFeedXml (pods) {
           }
         }],
         'itunes:type': 'serial',
-        'itunes:explicit': 'false',
+        'itunes:explicit': 'no',
         language: LANG,
         link: HOMEPAGE,
         item,
@@ -74,6 +72,6 @@ export function getFeedXml (pods) {
 
   const doc = xb2.create(obj)
   const xml = doc.end({prettyPrint: true})
-  return xml.replace('<?xml version="1.0"?>', '<?xml version="1.0" encoding="UTF-8"?>')
+  return xml.replace('<?xml version="1.0"?>', '<?xml version="1.0" encoding="utf-8"?>')
 }
 
