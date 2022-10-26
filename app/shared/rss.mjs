@@ -53,7 +53,7 @@ export function getFeedXml (pods) {
         description: stripTags(POD_DESC),
         'itunes:summary': stripTags(POD_DESC),
         'itunes:image': {
-          '@href': HOMEPAGE + POD_IMG,
+          '@href': POD_IMG,
         },
         'itunes:category': [{
           '@text': 'Fiction',
