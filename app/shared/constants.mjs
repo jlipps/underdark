@@ -5,6 +5,8 @@ if (process.env.ARC_ENV === 'staging') {
   host = 'https://staging.underdark.quest'
 } else if (process.env.ARC_ENV === 'production') {
   host = 'https://underdark.quest'
+} else if (process.env.ARC_ENV === 'testing') {
+  host = 'https://underdark.jlipps.com'
 }
 export const HOMEPAGE = host
 
