@@ -43,7 +43,7 @@ export default function UDListenList({html, state}) {
         Spotify
       </a>
 
-      <a class="button" href="${POD_LINK_APPLE}" disabled target="_blank">
+      <a class="button" href="${POD_LINK_APPLE}" target="_blank">
         <ud-icon icon="brands apple"></ud-icon>
         Apple
       </a>
