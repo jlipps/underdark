@@ -5,8 +5,6 @@ if (process.env.ARC_ENV === 'staging') {
   host = 'https://staging.underdark.quest'
 } else if (process.env.ARC_ENV === 'production') {
   host = 'https://underdark.quest'
-} else if (process.env.ARC_ENV === 'testing') {
-  host = 'https://underdark.jlipps.com'
 }
 export const HOMEPAGE = host
 
@@ -15,7 +13,10 @@ export const OWNER_EMAIL = 'jlipps+underdark@gmail.com'
 export const AUTHOR = 'Jonathan Lipps'
 export const LANG = 'en-us'
 export const IMAGE_SQ = arc.static('img/underdark-logo-square.jpg')
-export const POD_IMG = arc.static('img/underdark-logo-pod.jpg')
+
+// XXX: api gateway doesn't allow HEAD requests but apple podcast requires it, so need to actually
+// put the full url to the podcast image here
+export const POD_IMG = 'https://underdarkproduction-staticbucket-1vnlpuk0h4efb.s3.us-west-2.amazonaws.com/img/underdark-logo-pod.jpg'
 export const IMAGE_RECT = arc.static('img/underdark-on-bg.jpg')
 export const POD_DESC = `Stories from the D&D campaigns I've played in, cast into a pod so that you can listen to our adventures. Visit the website at <a href="https://underdark.quest">underdark.quest</a> to read all the episodes as well as for campaign and character overviews.`
 export const RSS_PATH = `/podcast/rss`
