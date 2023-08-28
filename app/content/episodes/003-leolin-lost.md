@@ -4,7 +4,7 @@ episodeNum: 3
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Leolin Lost
-date: 2022-07-02
+date: '2022-07-02'
 ---
 
 We ended the last session with the party divided about how to interact with the mysterious women, Adriel and Caligo, who asked us to come North with them. The most extreme position was occupied (of course) by Orwin, who remained convinced the women were trouble and we should get rid of them. Rianne decided instead to follow after them and engage in friendly conversation to gather intelligence about the road South. Fenn and Evendur went back to see Tarala and inform her about these women. Both conversations proved fruitful; Rianne learned that the women, acting as generals under Lady Almara, had survived their journey from the South by following a path guarded by mysterious protective gemstones. Tarala confirmed that Lady Almara had designs on similar stones of ancient power as a way to protect humankind once and for all from the various encroaching dangers. We were also assigned our first escortee, one Arcus Neris, famed architect of Nauem's Inner City (yes, reader: "Arcus the Architect"), whom the Academy needed to head South with us to design and build the next Academy.

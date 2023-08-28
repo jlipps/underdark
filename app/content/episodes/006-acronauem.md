@@ -4,7 +4,7 @@ episodeNum: 6
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Acronauem
-date: 2022-08-04
+date: '2022-08-04'
 image: img/content/episodes/orb.jpg
 ---
 

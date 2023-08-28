@@ -4,7 +4,7 @@ episodeNum: 8
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Duskfields Extraction
-date: 2022-10-15
+date: '2022-10-15'
 image: img/content/episodes/gallows.jpg
 ---
 

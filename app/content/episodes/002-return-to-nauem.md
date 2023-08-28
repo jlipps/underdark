@@ -4,7 +4,7 @@ episodeNum: 2
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Return to Nauem
-date: 2022-06-05
+date: '2022-06-05'
 ---
 
 We return to our fledgling heroes in the aftermath of a savaging by a band of Kotopoio (one of the many definitely evil bird-like species we have encountered so far). It was the middle of the night, and so we went back to sleep in order to recover and heal wounds; fortunately no more attacks came our way. The next morning, with Fenn's spiritual tank all filled up, he was able to restore poor Orwin to full health.

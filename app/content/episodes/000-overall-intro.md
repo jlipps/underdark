@@ -4,7 +4,7 @@ episodeNum: 0
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Intro to the Campaign
-date: 2022-05-15
+date: '2022-05-15'
 ---
 
 > Note: this is the intro to the campaign that was originally published

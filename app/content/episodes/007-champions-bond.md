@@ -4,7 +4,7 @@ episodeNum: 7
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Champions' Bond
-date: 2022-09-17
+date: '2022-09-17'
 image: img/content/episodes/sword.jpg
 ---
 

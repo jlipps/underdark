@@ -4,7 +4,7 @@ episodeNum: 1
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Call of the Kydemones
-date: 2022-05-22
+date: '2022-05-22'
 ---
 
 Our first proper D&D session started out simply enough: Rianne arrived at Highbury Monastery with an urgent request for our other heroes (Evendur, Orwin, and Fenn). We were to return at once to the Kydemones Academy in Nauem, where civic turmoil there was putting our shared alma mater at risk. Armed with traveling gear and sufficient rations, we set out, encountering muddy and dismal conditions on the road. Despite some false starts, we made it to the village of Krunu where we found a D'Murge priest, one Brother Dimos, willing to share his temple with travelers of his order.

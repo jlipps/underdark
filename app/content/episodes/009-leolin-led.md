@@ -4,7 +4,7 @@ episodeNum: 9
 campaign: champions-of-the-kydemones
 author: jlipps
 title: Leolin Led
-date: 2022-11-03
+date: '2022-11-03'
 image: img/content/episodes/sewer.jpg
 ---
 
